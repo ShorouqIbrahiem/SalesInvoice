@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.sig.controller;
 
 import com.sig.model.InvoiceHeader;
@@ -28,7 +24,6 @@ import java.util.List;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
-
 public class InvoiceActionListener implements ActionListener {
 
     private InvoiceFrame frame;
@@ -53,10 +48,7 @@ public class InvoiceActionListener implements ActionListener {
             case "New Invoice":
                 createNewInvoice();
                 break;
-
-            case "Delete Invoice":
-                deleteInvoice();
-                break;
+            break;
 
             case "New Line":
                 createNewLine();
@@ -194,7 +186,7 @@ public class InvoiceActionListener implements ActionListener {
                         lines += "\n";
                     }
                 }
-
+                
                 headers = headers.substring(0, headers.length()-1);
                 lines = lines.substring(0, lines.length()-1);
                 result = fc.showSaveDialog(frame);
